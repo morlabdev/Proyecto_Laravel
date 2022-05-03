@@ -27,9 +27,8 @@ class ImageController extends Controller
 
     public function save(Request $request)
     {
-
         // Validar datos del formulario
-        $validate = $this->validate($request, [
+        $this->validate($request, [
             'description' => 'required',
             'image_path' => 'required|image'
         ]);
